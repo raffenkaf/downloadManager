@@ -1,0 +1,18 @@
+{
+    "name": "samson/download-util",
+    "description": "download img(jpg, png, gif)  module",
+    "type": "no",
+    "license": "no",
+    "authors": [
+        {
+            "name": "Samson Sergey",
+            "email": "raffenkaf@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "autoload": {
+        "psr-4": { "Samson\\DownloadUtil\\": "src/" }
+    }
+}
