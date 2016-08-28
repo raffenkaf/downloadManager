@@ -91,7 +91,7 @@ class ImgManager {
         if (!is_null($maxFileSize) && (filesize($pathToCopy) > $maxFileSize)) {
             if (!unlink($pathToCopy)) {
                 throw new \Exception(
-                    'Файл слишком велик но возникла ошибка при попытке его удаления,
+                    'Файл слишком велик, но возникла ошибка при попытке его удаления,
                     path = "'.$pathToCopy.'".'
                 );
             }
