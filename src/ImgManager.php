@@ -1,29 +1,32 @@
 <?php
 namespace Samson\DownloadUtil;
 
-class ImgManager 
-{
+class ImgManager {
+
 	public $ftp;
 	public $username;
 	public $password; 
 	
-	public function __construct($ftp=null, $username=null, $password=null) {
+	public function __construct($ftp=null, $username=null, $password=null) 
+	{
 		$this->ftp = $ftp;
 		$this->username = $username;
 		$this->password = $password;
 	}
 	
-	public function setFtp($ftp) {
+	public function setFtp($ftp) 
+	{
 		$this->ftp = $ftp;
 	}
 	
-	public function setUsernameAndPassword($username, $password) {
+	public function setUsernameAndPassword($username, $password) 
+	{
 		$this->username = $username;
 		$this->password = $password;
 	}
 		
 	public function downloadImg($pathToCopy, $externalFileUrl, $fullUrl=false, $maxFileSize = null) 
-        {		
+	{		
 		$fullExternalUrl = null;
 		if ($fullUrl) {
 			$fullExternalUrl = $externalFileUrl;
@@ -41,11 +44,9 @@ class ImgManager
 			$extension != "jpeg" && 
 			$extension != "png" && 
 			$extension != "gif"
-		) {
-			
+		) {			
 			throw new \Exception('Неверное расширение файла источника("'.$extension.'").
-					                      Допустимо только jpg, png, gif.');
-			
+					                      Допустимо только jpg, png, gif.');			
 		}
 		
 	    if (!@getimagesize($fullExternalUrl)) {
