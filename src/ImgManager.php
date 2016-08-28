@@ -1,8 +1,8 @@
 <?php
 namespace Samson\DownloadUtil;
 
-class ImgManager {
-
+class ImgManager 
+{
 	public $ftp;
 	public $username;
 	public $password; 
@@ -22,8 +22,8 @@ class ImgManager {
 		$this->password = $password;
 	}
 		
-	public function downloadImg($pathToCopy, $externalFileUrl, $fullUrl=false, $maxFileSize = null) {
-		
+	public function downloadImg($pathToCopy, $externalFileUrl, $fullUrl=false, $maxFileSize = null) 
+        {		
 		$fullExternalUrl = null;
 		if ($fullUrl) {
 			$fullExternalUrl = $externalFileUrl;
